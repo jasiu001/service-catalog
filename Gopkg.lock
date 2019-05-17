@@ -1099,6 +1099,22 @@
 
 [[projects]]
   branch = "release-1.13"
+  digest = "1:1db7427f75701f34fb2f357ce213d02a40115c2a2e6f6782f5ccaabebc661a5b"
+  name = "k8s.io/apiextensions-apiserver"
+  packages = [
+    "pkg/apis/apiextensions",
+    "pkg/apis/apiextensions/v1beta1",
+    "pkg/client/clientset/clientset",
+    "pkg/client/clientset/clientset/fake",
+    "pkg/client/clientset/clientset/scheme",
+    "pkg/client/clientset/clientset/typed/apiextensions/v1beta1",
+    "pkg/client/clientset/clientset/typed/apiextensions/v1beta1/fake",
+  ]
+  pruneopts = "NUT"
+  revision = "bfb440be4b874c001bc64ea4b3324d37ab3c98dd"
+
+[[projects]]
+  branch = "release-1.13"
   digest = "1:6ad912d6fb8b6787228e6ab713a19d3d98033e67d7bbdaa2e8bcd43591590c82"
   name = "k8s.io/apimachinery"
   packages = [
@@ -1612,6 +1628,9 @@
     "k8s.io/api/authentication/v1",
     "k8s.io/api/authorization/v1",
     "k8s.io/api/core/v1",
+    "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1beta1",
+    "k8s.io/apiextensions-apiserver/pkg/client/clientset/clientset",
+    "k8s.io/apiextensions-apiserver/pkg/client/clientset/clientset/fake",
     "k8s.io/apimachinery/pkg/api/apitesting/fuzzer",
     "k8s.io/apimachinery/pkg/api/apitesting/roundtrip",
     "k8s.io/apimachinery/pkg/api/equality",

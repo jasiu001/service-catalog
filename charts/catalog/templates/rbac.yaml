@@ -26,6 +26,9 @@ items:
   - apiGroups: [""]
     resources: ["namespaces"]
     verbs:     ["get","list","watch"]
+  - apiGroups: ["apiextensions.k8s.io"]
+    resources: ["customresourcedefinitions"]
+    verbs:     ["list"]
   # access to our service-catalog types
   - apiGroups: ["servicecatalog.k8s.io"]
     resources: ["clusterserviceclasses"]
@@ -160,6 +163,9 @@ items:
     name: "servicecatalog.k8s.io:webhook"
   rules:
     # access to our service-catalog types
+    - apiGroups: ["apiextensions.k8s.io"]
+      resources: ["customresourcedefinitions"]
+      verbs:     ["list"]
     - apiGroups: ["servicecatalog.k8s.io"]
       resources: ["clusterserviceclasses"]
       verbs:     ["get","list","watch"]
